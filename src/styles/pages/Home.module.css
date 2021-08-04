@@ -1,0 +1,19 @@
+.container {
+  /* Esse containeir está ajustando a posição da experienceBar no topo e centro da tela */
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container section {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 colunas com  mesmo tamanho  */
+  gap: 6.25rem;
+  align-content: center; /* Faz com que todo conteudo do grip fique alinhado no centro */
+}
