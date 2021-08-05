@@ -52,3 +52,18 @@
   font-size: 1.25rem;
   font-weight: 600;
 }
+
+.countdownButtonIsActive {
+  background: var(--white);
+  color: var(--title);
+}
+
+.countdownButtonIsActive:not(disable):hover {
+  background: var(--red);
+  color: var(--white);
+}
+.countdownButton:disabled {
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
+}
