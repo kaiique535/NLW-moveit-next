@@ -5,7 +5,7 @@ export function Countdown() {
 
     /* Declaração de uma estado de React(useState)- Com isso automaticamente sera importado uma biblioteca do react no inicio do codigo */
     const [time, setTime] = useState(25 * 60); /* Como a contagem sera um declinio de segundos, iniciaremos a contagem em segundos - nome= time e setTime vai modificar a contagem */
-    const [active, setActive] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
 
     const minutes = Math.floor(time / 60);/* Aqui voce tem o time calculado na linh acima para formar os minutos, Quando tiver um valor quebrado ultilizamos Math.floor para arredondar o valor para baixo.  */
@@ -16,15 +16,15 @@ export function Countdown() {
     const [SecondLeft, SecondRight] = String(seconds).padStart(2, "0").split("");/* Mesma aplicação da linha acima mas agora em segundos */
 
     function startCountdown() {
-        setActive(true);
+        setIsActive(true);
     }
     useEffect(() => {
-        if (active && time > 0) {
+        if (isActive && time > 0) {
             setTimeout(() => {
                 setTime(time - 1);
             }, 1000);
         }
-    }, [active, time]);
+    }, [isActive, time]);
 
 
     return (
